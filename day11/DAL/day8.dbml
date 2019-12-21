@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="day8" Class="day8DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=day8;Integrated Security=True" SettingsObjectName="day11.Properties.Settings" SettingsPropertyName="day8ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.employerlist" Member="employerlists">
+    <Type Name="employerlist">
+      <Column Name="Employerlist" Member="Employerlist1" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="No" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
