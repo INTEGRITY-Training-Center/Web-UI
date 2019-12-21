@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        
+        p{
+            color:yellow;
+        }
+        #pcol{
+            color:brown;
+        }
+        .txtcol {
+            color: green;
+        }
+        #pcol{
+            color:violet;
+        }
+        
+    </style>
+</head>
+<body>
+    <p class="txtcol" id="pcol">This is Day4 Para.</p>
+
+    <h1 id="head">This is heading.</h1>
+
+    <label class="lbltxt">This is label!</label>
+    <label class="lbltxt">This is label!</label>
+    <label class="lbltxt">This is label!</label>
+    <label class="lbltxt">This is label!</label>
+    <label class="lbltxt">This is label!</label>
+
+    <script>
+        var x = document.getElementById("head");
+        x.innerHTML = "This is Update Heading!";
+        x.style.color = "gray";
+        x.style.border = "2px solid green";
+        x.style.borderRadius = "5px";
+        var y = document.getElementById("pcol");
+        y.style.color = "#663399";
+        var z = document.getElementsByClassName("lbltxt")[2];
+        z.style.color = "#d3c614";
+    </script>
+</body>
+</html>

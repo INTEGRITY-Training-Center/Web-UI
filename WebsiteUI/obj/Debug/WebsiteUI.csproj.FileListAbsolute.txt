@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2013\Projects\frontend\WebsiteUI\bin\WebsiteUI.dll.config
+c:\users\user\documents\visual studio 2013\Projects\frontend\WebsiteUI\bin\WebsiteUI.dll
+c:\users\user\documents\visual studio 2013\Projects\frontend\WebsiteUI\bin\WebsiteUI.pdb
+c:\users\user\documents\visual studio 2013\Projects\frontend\WebsiteUI\obj\Debug\WebsiteUI.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\frontend\WebsiteUI\obj\Debug\WebsiteUI.dll
+c:\users\user\documents\visual studio 2013\Projects\frontend\WebsiteUI\obj\Debug\WebsiteUI.pdb

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="dist/css/bootstrap.css" />
+    <style>
+        *{
+            color:red !important;   /*universal selector*/
+        }
+        .lbl{
+            font-size:22px;      /*class selector*/
+        }
+        p .lbl .lbl2{
+            font-size:40px;    /*compound selector*/
+        }
+        .lbl > a{
+            font-size:8px;    /*child selector*/
+        }
+        .lbl a{
+            font-size:60px;    /*sibling selector*/
+        }
+        #p{
+            display:none;      /*class selector*/
+        }
+        #h:hover #p{
+            display:block;    /*pseudo class selector*/
+        }
+        .pl::placeholder{     /*pseudo element*/
+            color:violet;
+        }
+        label:nth-child(5){        /*pseudo child*/
+            color:violet !important;
+            font-size:80px;
+        }
+        label:first-child {              /*pseudo child*/
+            color: blue;
+            font-size: 40px;
+        }
+        .fl{
+            position:fixed;
+            width:60px;
+            height:60px;
+            background-color:purple;
+            bottom:10px;
+            right:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p>Paragraph</p>
+    <label class="lbl"> Label 1 <a>Anchor</a> <a>Anchor2</a> </label>
+    <label class="lbl lbl2">Label 2</label>
+    <h1 id="h">
+        Press
+        <p id="p"> Hover Test!</p>
+    </h1>
+    <input type="text" placeholder="text@gmail.com" class="form-control pl" />
+    <div id="div1">
+        <label>Label 1</label>
+        <label>Label 2</label>
+        <label>Label 3</label>
+        <label>Label 4</label>
+        <label>Label 5</label>
+    </div>
+    
+    <div class="fl">
+        <a href="day14messenger.html">day14messenger.html</a></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <style>
+        .fl-block {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            position:fixed;
+            bottom:20px;
+            right:20px;
+        }
+        .pop{
+            width:150px;
+            height:240px;
+            position:fixed;
+            bottom:20px;
+            right:100px;
+            border:1px solid blue;
+            padding:7px;
+            text-align:center;
+            display:none;
+        }
+        h1{
+            background-color:blue;
+            color:white;
+            font-size:1.5em;
+        }
+    </style>
+    <script>
+        var i = 0;
+        function fl_blockOn() {
+            
+            var obj = document.getElementsByClassName("pop")[0];
+
+            if (i == 0) {
+                obj.setAttribute("style", "display:block;");
+                i = 1;
+            }
+            else {
+               
+                obj.setAttribute("style", "display:none;");
+                i = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="fl-block" onclick="fl_blockOn()">
+        
+    </div>
+    <div class="pop">
+        <h1> Sign In </h1>
+        <input type="text" class="form-control" placeholder="Name" /><br />
+        <input type="password" class="form-control" placeholder="Password" /><br />
+        <input type="button" class="btn btn-success" value="Sign-in" /> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>Are you fool!</p>
+    <input type="button" id="btnyes" value="YES" onmouseover="changetext()" onmouseleave="originaltext()"/>
+    <input type="button" id="btnno" value="NO"/>
+    <script>
+        function changetext() {
+            document.getElementById("btnyes").value="YES";
+            document.getElementById("btnno").value = "NO";
+        }
+        function originaltext() {
+            document.getElementById("btnyes").value = "NO";
+            document.getElementById("btnno").value = "YES";
+        }
+    </script>
+</body>
+</html>

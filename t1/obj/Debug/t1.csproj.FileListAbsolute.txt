@@ -1,0 +1,8 @@
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\bin\Debug\t1.exe.config
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\bin\Debug\t1.exe
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\bin\Debug\t1.pdb
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\obj\Debug\t1.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\obj\Debug\t1.exe
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\obj\Debug\t1.pdb
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\bin\Debug\globalizer.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\frontend\t1\bin\Debug\globalizer.pdb

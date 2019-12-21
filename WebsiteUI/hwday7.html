@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    Are you fool!
+    <br />
+    <input type="button" id="Yname" value="NO" onmouseover="myOriginalButton()" onmouseout="myChangeButton()"/>
+           <input type="button" id="Nname" value="YES" onmouseover="myChangeButton()"/>
+    <script>
+        function myOriginalButton() {
+            document.getElementById("Yname").value = "YES";
+            document.getElementById("Nname").value = "NO";
+        }
+        function myChangeButton() {
+            document.getElementById("Yname").value = "NO";
+            document.getElementById("Nname").value = "YES";
+        }
+    </script>
+</body>
+</html>
