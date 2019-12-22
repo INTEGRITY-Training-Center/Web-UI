@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,6 +64,7 @@
     <Content Include="day14messenger.html" />
     <Content Include="day15.html" />
     <Content Include="day16.html" />
+    <Content Include="Day17_zinmin.html" />
     <Content Include="dist\css\bootstrap-theme.css.map" />
     <Content Include="dist\css\bootstrap-theme.min.css.map" />
     <Content Include="dist\css\bootstrap.css.map" />
