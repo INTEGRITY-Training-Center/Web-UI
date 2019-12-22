@@ -2,8 +2,78 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+    <meta charset="utf-8" />
+
+    <style>
+        .fl-block {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .pop {
+            width: 150px;
+            height: 240px;
+            position: fixed;
+            bottom: 20px;
+            right: 100px;
+            border: 1px solid blue;
+            padding: 7px;
+            text-align: center;
+            
+        }
+
+        h1 {
+            background-color: blue;
+            color: white;
+            font-size: 1.5em;
+        }       
+        
+        .pop.off{
+            display:none;
+        }
+
+        .pop.on {
+            display: block;
+        }
+    </style>
+    
+
 </head>
 <body>
 
+    <div class="fl-block" >
+
+    </div>
+    <div class="pop off">
+        <h1> Sign In </h1>
+        <input type="text" class="form-control" placeholder="Name" /><br />
+        <input type="password" class="form-control" placeholder="Password" /><br />
+        <input type="button" class="btn btn-success" value="Sign-in" />
+    </div>
+    <script>
+        $(document).ready(function () {  //document.ready state ka onload state
+            
+            $(".fl-block").click(function () {   
+                if ($(".pop").hasClass("on"))
+                {
+                   
+                        $(".pop").removeClass("on");
+                    
+                }
+                else {
+              
+                    $(".pop").addClass("on");
+                    
+                }
+            });
+        });
+    </script>
 </body>
 </html>
