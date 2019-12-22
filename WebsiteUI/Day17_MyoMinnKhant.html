@@ -3,8 +3,69 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .fl-block {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .pop {
+            width: 150px;
+            height: 240px;
+            position: fixed;
+            bottom: 20px;
+            right: 100px;
+            border: 1px solid blue;
+            padding: 7px;
+            text-align: center;
+        }
+
+            .pop.off {
+                display: none;
+            }
+
+            .pop.on {
+                display: block;
+            }
+
+
+        h1 {
+            background-color: blue;
+            color: white;
+            font-size: 1.5em;
+        }
+    </style>
+
 </head>
 <body>
+    <div class="fl-block" onclick="fl_blockOn()">
 
+    </div>
+    <div class="pop off">
+        <h1> Sign In </h1>
+        <input type="text" class="form-control" placeholder="Name" /><br />
+        <input type="password" class="form-control" placeholder="Password" /><br />
+        <input type="button" class="btn btn-success" value="Sign-in" />
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".fl-block").click(function () {
+                if ($(".pop").hasClass("on")) {
+                    $(".pop").removeClass("on");
+                }
+                else {
+
+                    $(".pop").addClass("on");
+
+                }
+            });
+    });
+    </script>
 </body>
 </html>
