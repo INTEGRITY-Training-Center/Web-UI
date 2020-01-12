@@ -1,51 +1,98 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-	<meta charset="utf-8" />
     <link href="dist/css/bootstrap.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
 </head>
 <body>
-    <table id="showdata" class="table table-bordered" >
-        <tr>
-            <td>
+    <input type="text" id="txtteam" />
+    <input type="button" value="Save" id="btnsave" /><br />
 
-            </td>
-        </tr>
-    </table>
+    <input type="text" id="teamID" />
+    <input type="button" value="Get" id="btnget" />
+
+    <table id="showdata" class="table table-bordered"></table>
+
+
+
     <script>
         $(document).ready(function () {
-       
             $.ajax({
                 type: "GET",
                 url: "http://192.168.0.104:7777/api/team/getteamlist",
                 datatype: "json",
                 success: function (data) {
-                    var th="<tr><th>.ID</th><th>Name</th><th>Date</th><th>UDate</th></tr>";
+                    var th = "<tr><th>ID</th><th>Name</th><th>Created Date</th><th>Updated Date</th></tr>";
                     $("#showdata").append(th);
-                    $.each(data,function (i,item){
-                     var   tr="<tr>"+
-                        "<td>" + item.TeamID + "</td>" +
-                        "<td>" + item.TeamDescription + "</td>" +
-                        "<td>" + item.CreatedDate + "</td>" +
-                        "<td>" + item.UpdatedDate + "</td>" +
-                        "</tr>";
-
+                    $.each(data,function (i, item) {
+                        var tr = "<tr>" + "<td>" + item.TeamID + "</td>" +
+                                "<td>" + item.TeamDescription + "</td>" +
+                                "<td>" + item.CreatedDate + "</td>" +
+                                "<td>" + item.UpdatedDate + "</td>" + "</tr>";
                         $("#showdata").append(tr);
                     });
-
                 },
                 error: function (data) {
 
                 },
-                failure: function (data){
+                failure: function (data) {
 
                 }
+            });
+
+
+
+            $("#btnsave").click(function () {
+                var text = $("#txtteam").val();
+                $.ajax({
+                    type: "POST",
+                    url: "http://192.168.0.104:7777/api/team/add?_team=" + text,
+                    datatype: "json",
+                    success: function (data) {
+                        alert("Save Success");
+                    },
+                    error: function (data) {
+
+                    },
+                    failure: function (data) {
+
+                    },
+                });
+
+
+            });
+
+            $("#btnget").click(function () {
+                var text = $("#teamID").val();
+                $.ajax({
+                    type: "GET",
+                    url: "http://192.168.0.104:7777/api/team/id?id=" + text,
+                    datatype: "json",
+                    success: function (data) {
+                        var tab = "<table><tr>" +
+                                "<td>ID</td><td>Name</td><td>Creaded Date</td><td>Updated Date</td>" +
+                                "</tr>" +
+                                "<tr>" +
+                                "<td>" + data.TeamID + "</td>" +
+                                "<td>" + data.TeamDescription + "</td>" +
+                                "<td>" + data.CreatedDate + "</td>" +
+                                "<td>" + data.UpdatedDate + "</td>" +
+                                "</tr></table>";
+                        $("body").append(tab);
+                    },
+                    error: function (data) {
+
+                    },
+                    failure: function (data) {
+
+                    },
+                });
+
 
             });
         });
-       
     </script>
 </body>
 </html>
