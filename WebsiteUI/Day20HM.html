@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <table id="showdata" class="table table-bordered"></table>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:57708/api/student/getstudent",
+                datatype: "json",
+                success: function (data) {
+                    var th = "<tr><th>StudentID</th><th>Name</th><th>mobile</th></tr>";
+                    $("#showdata").append(th);
+                    $.each(data,function (i, item) {
+                        var tr = "<tr>" + "<td>" + item.StudentID + "</td>" +
+                                "<td>" + item.Name + "</td>" +
+                                "<td>" + item.Mobile + "</td>" + "</tr>";
+                        $("#showdata").append(tr);
+                    });
+                },
+                error: function (data) {
+
+                },
+                failure: function (data) {
+
+                }   
+            });
+
+
+
+            });
+       
+    </script>
+</body>
+</html>
