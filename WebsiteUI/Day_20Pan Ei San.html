@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="txtteam" />
+    <input type="button" value="Save" id="btnsave" /><br />
+
+    <input type="text" id="teamID" />
+    <input type="button" value="Get" id="btnGet" />
+
+    <table id="showdata" class="table table-bordered"></table>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52603/api/student/getstudent",
+                datatype: "json",
+                success: function (data) {
+                    $("DIV").html('');
+                    var th = "<tr><th>StudentID</th><th>Name</th><th>Mobile</th></tr>";
+                    $("#showdata").append(th);
+                    $.each(data, function (i, item) {
+                        var tr = "<tr>" +
+                            "<td>" + item.StudentID + "</td>" +
+                            "<td>" + item.Name + "</td>" +
+                            "<td>" + item.Mobile + "</td>" +
+                            "</tr>";
+                    $("#showdata").append(tr);
+                    });
+                },
+                error: function (data) {
+                },
+                failure: function (data) {
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
